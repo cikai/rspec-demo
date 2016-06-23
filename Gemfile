@@ -30,17 +30,20 @@ gem 'jbuilder', '~> 2.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# Use factory_girl_rails
-gem 'factory_girl_rails', '~> 4.7'
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'rspec'
+	gem 'rspec-rails'
+	gem 'factory_girl_rails'
 end
 
-group :test, :development do
-  gem 'rspec'
-  gem 'rspec-rails'
+group :test do
+	gem 'faker'
+	gem 'capybara'
+	gem 'database_cleaner'
+	gem 'launchy'
+	gem 'selenium-webdriver'
 end
 
 group :development do
